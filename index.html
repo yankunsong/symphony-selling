@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery Page</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="contact-info">
+        <p>Text me at 929-888-0676 or WeChat @syk195</p>
+    </header>
+    <nav class="category-tabs">
+        <ul>
+            <li class="tab active" data-category="all">All</li>
+            <li class="tab" data-category="furnitures">Furnitures</li>
+            <li class="tab" data-category="kitchen">Kitchen</li>
+            <li class="tab" data-category="painting">Paintings</li>
+        </ul>
+    </nav>
     <div class="gallery">
-      <div class="photo">
-        <img src="1.jpeg" alt="Description of image 1" />
-        <p>
-          Description for image 1. This is a more detailed description of the
-          first image.
-        </p>
-      </div>
-      <div class="photo">
-        <img src="2.jpeg" alt="Description of image 2" />
-        <p>
-          Description for image 2. This is a more detailed description of the
-          second image.
-        </p>
-      </div>
-      <div class="photo">
-        <img src="1.jpeg" alt="Description of image 3" />
-        <p>
-          Description for image 3. This is a more detailed description of the
-          third image.
-        </p>
-      </div>
-      <!-- More photo blocks can be added here -->
+        <div class="photo furnitures">
+            <img src="furniture1.jpg" alt="Classic Chair">
+            <p>Classic wooden chair perfect for any dining room.</p>
+        </div>
+        <div class="photo kitchen">
+            <img src="kitchen1.jpg" alt="Modern Kettle">
+            <p>Stainless steel kettle with an automatic shut-off feature.</p>
+        </div>
+        <div class="photo painting">
+            <img src="painting1.jpg" alt="Sunset Canvas">
+            <p>A beautiful painting of a sunset, ideal for living room decor.</p>
+        </div>
+        <!-- More photo blocks can be added here -->
     </div>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
