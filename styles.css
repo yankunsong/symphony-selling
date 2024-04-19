@@ -17,16 +17,15 @@ body {
   padding: 0;
   margin: 0;
   background-color: #6cace4;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: nowrap; /* Keeps the tabs in a single horizontal line */
   display: flex;
-  flex-wrap: nowrap; /* Prevents wrapping of items */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  flex-wrap: wrap; /* Allows items to flow into multiple rows */
+  justify-content: center; /* Centers the tabs within the navigation */
+  overflow-x: visible; /* Changed from auto to visible to accommodate wrapping */
+  white-space: normal; /* Changed to normal to allow wrapping */
 }
 
 .category-tabs li {
-  display: inline-block; /* Change to inline-block for scrolling */
-  flex-grow: 0;
+  display: inline-block; /* Keeps tabs inline but allows wrapping */
   text-align: center;
 }
 
@@ -35,8 +34,14 @@ body {
   padding: 15px 20px;
   color: white;
   background-color: #6cace4;
+  border-left: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
   transition: background-color 0.3s;
+  position: relative; /* Allows for positioning of pseudo-elements */
+}
+
+.category-tabs li.tab + li.tab {
+  margin-left: -1px; /* Overlaps the borders between tabs */
 }
 
 .category-tabs li.tab:hover,
@@ -77,13 +82,17 @@ body {
 }
 
 @media (max-width: 600px) {
+  .category-tabs li.tab {
+    flex-basis: 25%; /* Each tab will take about one-fourth of the width of the container */
+    box-sizing: border-box; /* Ensures padding and border are included in width calculation */
+    padding: 10px 5px; /* Adjust padding to fit smaller width */
+  }
+
   .gallery {
     justify-content: center;
   }
+
   .category-tabs ul {
-    scroll-snap-type: x mandatory; /* Adds snap points to the scrolling */
-  }
-  .category-tabs li.tab {
-    scroll-snap-align: start; /* Ensures tabs align nicely when scrolled */
+    scroll-snap-type: none; /* Disabling snap points for multi-row layout */
   }
 }
