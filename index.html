@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery Page</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header class="contact-info">
-        <p>Text me at 929-888-0676 or WeChat @syk195</p>
+      <p>Text me at 929-888-0676 or WeChat @syk195</p>
     </header>
     <nav class="category-tabs">
-        <ul>
-            <li class="tab active" data-category="all">All</li>
-            <li class="tab" data-category="furnitures">Furnitures</li>
-            <li class="tab" data-category="kitchen">Kitchen</li>
-            <li class="tab" data-category="painting">Paintings</li>
-        </ul>
+      <ul>
+        <li class="tab active" data-category="all">All</li>
+        <li class="tab" data-category="furnitures">Furnitures</li>
+        <li class="tab" data-category="kitchen">Kitchen</li>
+        <li class="tab" data-category="painting">Paintings</li>
+        <li class="tab" data-category="latest">Latest</li>
+      </ul>
     </nav>
     <div class="gallery">
-        <div class="photo furnitures">
-            <img src="furniture1.jpg" alt="Classic Chair">
-            <p>Classic wooden chair perfect for any dining room.</p>
-        </div>
-        <div class="photo kitchen">
-            <img src="kitchen1.jpg" alt="Modern Kettle">
-            <p>Stainless steel kettle with an automatic shut-off feature.</p>
-        </div>
-        <div class="photo painting">
-            <img src="painting1.jpg" alt="Sunset Canvas">
-            <p>A beautiful painting of a sunset, ideal for living room decor.</p>
-        </div>
-        <!-- More photo blocks can be added here -->
+      <div class="photo furnitures" data-timestamp="20230417">
+        <img src="furniture1.jpg" alt="Classic Chair" />
+        <p>Classic wooden chair perfect for any dining room.</p>
+      </div>
+      <div class="photo furnitures" data-timestamp="20240417">
+        <img src="furniture1.jpg" alt="Classic Chair" />
+        <p>test chair perfect for any dining room.</p>
+      </div>
+      <div class="photo kitchen" data-timestamp="20230418">
+        <img src="kitchen1.jpg" alt="Modern Kettle" />
+        <p>Stainless steel kettle with an automatic shut-off feature.</p>
+      </div>
+      <div class="photo painting" data-timestamp="20230416">
+        <img src="painting1.jpg" alt="Sunset Canvas" />
+        <p>A beautiful painting of a sunset, ideal for living room decor.</p>
+      </div>
+      <!-- More photo blocks can be added here with their timestamps -->
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
