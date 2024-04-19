@@ -5,6 +5,46 @@ body {
   background: #f4f4f4;
 }
 
+.contact-info {
+  background-color: #6cace4; /* Soft blue */
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.category-tabs ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #6cace4; /* Soft blue */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.category-tabs li {
+  display: block;
+  flex-grow: 1;
+}
+
+.category-tabs li.tab {
+  cursor: pointer;
+  padding: 15px 20px;
+  color: white;
+  background-color: #6cace4; /* Consistent blue across the tabs */
+  border-right: 1px solid #ffffff; /* White border for a cleaner separation */
+  transition: background-color 0.3s;
+}
+
+.category-tabs li.tab:hover,
+.category-tabs li.tab:active {
+  background-color: #5b8dc5; /* A slightly darker blue for interaction */
+}
+
+.category-tabs li.active {
+  background-color: #4a7bb6; /* Even darker for the active state */
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -31,6 +71,9 @@ body {
 
 @media (max-width: 600px) {
   .gallery {
-    grid-template-columns: 1fr; /* Stacks images on smaller screens */
+    grid-template-columns: 1fr;
+  }
+  .category-tabs ul {
+    display: block;
   }
 }
